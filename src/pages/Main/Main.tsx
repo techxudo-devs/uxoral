@@ -1,5 +1,6 @@
 import Blogs from '@/components/Home/Blogs'
 import Faqs from '@/components/Home/Faqs'
+import Featured from '@/components/Home/Featured'
 import Hero from '@/components/Home/Hero'
 import LogoSlider from '@/components/Home/LogoSlider'
 import Points4 from '@/components/Home/Points4'
@@ -11,6 +12,7 @@ const Main = () => {
     <div>
         <Hero />
         <LogoSlider />
+        <Featured />
         <Services />
         <Points4 />
         <Testimonials/>

@@ -121,7 +121,7 @@ const Services = () => {
             <div>
               <div className="flex items-center gap-1 text-xs font-interd uppercase mb-3">
             <span className="text-[#FF5420] font-medium">//</span>
-            <span className="text-gray-700">FEATURED WORK</span>
+            <span className="text-gray-700">SERVICES</span>
           </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-black font-interd">
                 Creative Services
