@@ -64,7 +64,7 @@ const Testimonials = () => {
         {testimonials.map((item) => (
           <div
             key={item.id}
-            className="w-[660px] sm:w-[740px] md:w-[700px] bg-[#F3F3F5] rounded-3xl flex items-center justify-between gap-6 flex-shrink-0 mx-4 md:mx-5"
+            className="w-[560px] sm:w-[740px] md:w-[700px] bg-[#F3F3F5] rounded-3xl flex items-center justify-between gap-6 flex-shrink-0 mx-4 md:mx-5"
           >
             {/* Left Content Column with dedicated padding */}
             <div className="flex-1 flex flex-col justify-between h-full p-6 sm:p-8 md:pl-14">
@@ -75,7 +75,7 @@ const Testimonials = () => {
 
               {/* Author Information */}
               <div>
-                <h4 className="text-xl md:text-xl font-medium text-black font-interd">
+                <h4 className="text-sm sm:text-lg md:text-xl lg:text-xl font-medium text-black font-interd">
                   {item.name}
                 </h4>
               </div>
