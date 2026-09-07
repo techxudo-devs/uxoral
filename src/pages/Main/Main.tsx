@@ -16,9 +16,9 @@ const Main = () => {
         <Featured />
         <Work />
         <Services />
-        <Points4 />
+        {/* <Points4 /> */}
         <Testimonials/>
-        <Faqs />
+        {/* <Faqs /> */}
         <Blogs />
     </div>
   )

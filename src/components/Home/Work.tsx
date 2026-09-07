@@ -18,31 +18,31 @@ interface WorkProject {
 const projects: WorkProject[] = [
   {
     id: 1,
-    title: "Oster",
-    subtitle: "Illustration Design, eBook & Digital Reports",
-    date: "May 4, 2025",
-    category: "Advertising",
-    image: "/images/card1.webp",
+    title: "",
+    subtitle: "",
+    date:"",
+    category: "",
+    image: "/images/fepohero2.jpg",
     overlayColor: "from-amber-950/70 via-orange-950/40 to-amber-900/80",
     link: "#",
   },
   {
     id: 2,
-    title: "Roland",
-    subtitle: "Ad Creative, Social Media Creative",
-    date: "February 15, 2023",
-    category: "Marketing",
-    image: "/images/card2.webp",
+    title: "",
+    subtitle: "",
+    date: "",
+    category: "",
+    image: "/images/fepohero4.jpg",
     overlayColor: "from-blue-950/80 via-blue-900/50 to-indigo-950/80",
     link: "#",
   },
   {
     id: 3,
-    title: "Reddit",
-    subtitle: "Motion Designer, Social Media Creative",
-    date: "November 20, 2024",
-    category: "Branding",
-    image: "/images/card3.webp",
+    title: "",
+    subtitle: "",
+    date: "",
+    category: "",
+    image: "/images/fepohero3.jpg",
     overlayColor: "from-teal-950/80 via-emerald-900/50 to-teal-950/80",
     link: "#",
   },
@@ -162,7 +162,7 @@ const ProjectCard = ({ project }: { project: WorkProject }) => {
             damping: 30,
             mass: 0.1,
           }}
-          className="w-12 h-12 rounded-full bg-[#FF5420] text-white flex items-center justify-center shadow-2xl"
+          className="w-12 h-12 rounded-full bg-[#2563EB] text-white flex items-center justify-center shadow-2xl"
         >
           <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
         </motion.div>
@@ -173,19 +173,19 @@ const ProjectCard = ({ project }: { project: WorkProject }) => {
 
 const Work = () => {
   return (
-    <section className="w-full bg-white text-black py-10 md:py-14 px-6 md:px-12 select-none overflow-hidden">
+    <section id="works" className="w-full bg-white text-black py-10 md:py-14 px-4 md:px-6 lg:px-12 select-none overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-8 md:mb-12">
           {/* Top Tag */}
           <div className="flex items-center gap-1 text-xs font-interd uppercase mb-3">
-            <span className="text-[#FF5420] font-medium">//</span>
+            <span className="text-[#2563EB] font-medium">//</span>
             <span className="text-gray-700">FEATURED WORK</span>
           </div>
 
           {/* Headline */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-black font-interd">
-            Every Type of Creative Work
+            Our Creative Work
           </h2>
         </div>
 

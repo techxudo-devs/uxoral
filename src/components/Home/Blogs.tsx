@@ -16,27 +16,27 @@ const blogPosts: BlogPost[] = [
   {
     id: 1,
     date: 'January 8, 2026',
-    title: 'Design Blunders: What Startups Often Overlook',
+    title: 'Roop',
     image:
-      'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80',
+      'images/blog1.webp',
     alt: 'Colorful artwork poster',
     link: '#',
   },
   {
     id: 2,
     date: 'October 25, 2025',
-    title: 'From Vision to Reality: Our Design Journey',
+    title: 'Dhanak HYDR',
     image:
-      'https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=800&q=80',
+      'images/blog2.webp',
     alt: 'Typographic graphic poster',
     link: '#',
   },
   {
     id: 3,
     date: 'January 11, 2026',
-    title: 'Common Pitfalls in Startup Product Design',
+    title: 'Agay Dekh',
     image:
-      'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
+      'images/blog3.webp',
     alt: 'Typography book on green lawn',
     link: '#',
   },
@@ -66,7 +66,7 @@ const Blogs = () => {
         <div className="flex flex-col items-center text-center mb-10 md:mb-14">
           {/* Top Tag */}
           <div className="flex items-center gap-1 text-xs font-interd uppercase mb-3">
-            <span className="text-[#FF5420] font-medium">//</span>
+            <span className="text-[#2563EB] font-medium">//</span>
             <span className="text-gray-700">Blogs & Articles</span>
           </div>
 

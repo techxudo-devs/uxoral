@@ -14,73 +14,77 @@ interface ServiceItem {
 const servicesData: ServiceItem[] = [
   {
     id: '01',
-    title: 'Web Design',
+    title: 'Video Production',
     pills: [
-      'Landing',
-      'Brochure Site',
-      'Corporate Website',
-      'E-Commerce',
-      'Web 3.0',
-      'UI/UX Design',
+      'Brand Films',
+      'Cinematic Commercials',
+      'Motion Graphics',
+      'Color Grading',
+      'Sound Design',
+      'Post-Production',
     ],
     description:
-      'We create world-class websites using modern design practices. Mobile-first websites and web experiences are essential to the success of your web project. While maintaining bespoke originality, our team will focus on responsive design and optimize your website for any device and interface. Your new website will attract desirable target audiences, boost engagement, drive sales, and increase the brand value of your business.',
+      'We create cinematic brand stories that connect emotionally with your audience, elevating your identity through high-impact visuals and thoughtful storytelling.',
     link: '#',
   },
   {
     id: '02',
-    title: 'Branding',
+    title: 'Video Direction',
     pills: [
-      'Print Graphics',
-      'Conference Event Branding',
-      'Deck Designs',
-      'Digital Brand Collateral',
-      'Social Media Designs',
+      'Event Highlight Reels',
+      'Creative Direction',
+      'Scriptwriting',
+      'Storyboarding',
+      'Talent Casting',
+      'On-Set Direction',
     ],
     description:
-      'Experienced with top-grade brand design for a wide range of products from consumer goods to startup ideas. Your brand identity will exceed all expectations with fresh yet pragmatic design ideas realistic to produce by the creatives at Uxora. Branding is what makes us fall in love with some of our favorite products. Make yours a favorite.',
+      'Our team captures key moments from your events and transforms them into compelling highlight reels that extend the experience and amplify engagement.',
     link: '#',
   },
   {
     id: '03',
-    title: 'Graphic Design',
+    title: 'Video Filming',
     pills: [
-      'Vector Illustrations',
-      'Marketing Collateral',
-      'Poster & Billboard',
-      'Infographics',
-      'Custom Iconography',
+      'Product Demo Videos',
+      'Cinematography',
+      'Commercial Shoots',
+      'Drone Footage',
+      'Studio Filming',
+      'B-Roll Capture',
     ],
     description:
-      'Our graphic design solutions convey your message with visual clarity and aesthetic power. From high-converting digital ad graphics to physical print media, we design assets that capture attention and elevate your brand presence.',
+      'Showcase your product’s features and benefits with clean, engaging demo videos that educate, inform, and convert viewers into customers.',
     link: '#',
   },
   {
     id: '04',
-    title: 'Packaging Design',
+    title: 'Video Entertain',
     pills: [
-      'Consumer Goods Packaging',
-      'Label & Box Design',
-      'Eco-Friendly Materials',
-      '3D Product Renderings',
+      'Short-Form Content',
+      'Reels & TikToks',
+      'Memes & Viral Clips',
+      'Social Cutdowns',
+      'Animation',
+      'Platform Optimization',
     ],
     description:
-      'Experienced with top-grade packaging design for a wide range of products from consumer goods to startup ideas. Your packaging design will exceed all expectations with fresh yet pragmatic design ideas realistic to produce by the creatives at Uxora. Packaging design is what makes us fall in love with some of our favorite products. Make yours a favorite.',
+      'We craft short-form, platform-optimized content designed to stop the scroll, spark interaction, and maximize reach across all major social media channels.',
     link: '#',
   },
-  {
-    id: '05',
-    title: 'Video Production',
-    pills: [
-      'Corporate Video Production',
-      'Event Video Production',
-      'Promotional Videos',
-      'Post-Production & Editing',
-    ],
-    description:
-      'Uxora specializes in video production since 2015 in Manhattan, our talented team leverages over 30 years of combined experience working with advertising agencies and brands to create exceptional visual narratives. We are dedicated to video excellence, crafting impactful content that authentically engages audiences and elevates brands.',
-    link: '#',
-  },
+  // {
+  //   id: '05',
+  //   title: 'Video Production',
+  //   pills: [
+  //     'Corporate Video Production',
+  //     'Event Video Production',
+  //     'Promotional Videos',
+  //     'Post-Production & Editing',
+  //   ],
+  //   description:
+  //     'Uxora specializes in video production since 2015 in Manhattan, our talented team leverages over 30 years of combined experience working with advertising agencies and brands to create exceptional visual narratives. We are dedicated to video excellence, crafting impactful content that authentically engages audiences and elevates brands.',
+  //   link: '#',
+  // },
 ]
 
 const Services = () => {
@@ -109,7 +113,7 @@ const Services = () => {
 
   return (
     // Outer scroll container (500vh to give enough scroll distance for 5 steps)
-    <section ref={containerRef} className="relative w-full h-[500vh] bg-white text-black font-interd select-none">
+    <section id="services" ref={containerRef} className="relative w-full h-[500vh] bg-white text-black font-interd select-none">
       
       {/* Sticky Inner Viewport */}
       <div className="sticky top-0 h-screen w-full flex flex-col justify-between py-10 md:py-14 px-6 md:px-12 overflow-hidden">
@@ -120,20 +124,20 @@ const Services = () => {
             {/* Left Title */}
             <div>
               <div className="flex items-center gap-1 text-xs font-interd uppercase mb-3">
-            <span className="text-[#FF5420] font-medium">//</span>
+            <span className="text-[#2563EB] font-medium">//</span>
             <span className="text-gray-700">SERVICES</span>
           </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-black font-interd">
-                Creative Services
+                What We Do?
               </h2>
             </div>
 
             {/* Right Header Paragraph */}
             <p className="text-xs sm:text-sm text-gray-900 font-normal leading-relaxed max-w-md font-interd">
-              We build the next in commerce on Shopify. From strategy to design,
-              development to retention, we've got you covered. 9+ years of
-              experience, 200+ stores launched, 60+ experts and we're your
-              partner from discovery to launch and beyond.
+              Crafting visuals and compelling stories for brands that move the
+              world. From concept to screen, we produce high-impact video
+              content that elevates your identity and connects with your
+              audience.
             </p>
           </div>
 
@@ -207,7 +211,7 @@ const Services = () => {
                   <div className="pt-2 border-t border-gray-100">
                     <a
                       href={activeService.link}
-                      className="inline-flex items-center gap-1.5 text-[#FF5420] text-xs sm:text-sm font-medium hover:underline font-interd transition-all"
+                      className="inline-flex items-center gap-1.5 text-[#2563EB] text-xs sm:text-sm font-medium hover:underline font-interd transition-all"
                     >
                       <span>Learn More</span>
                       <svg

@@ -2,31 +2,8 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-
-// Custom SVGs matching the exact rounded aesthetic from the screenshots
-const HomeIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M11.2 2.38a2 2 0 0 1 1.6 0l8 3.8A2 2 0 0 1 22 8.01V18a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8.01a2 2 0 0 1 1.2-1.83l8-3.8zM15 11a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
-  </svg>
-)
-
-const UsersIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M13 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM18 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM4 18c0-2.5 2.5-4 6-4s6 1.5 6 4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1zM15 18c.2-.9.8-1.7 1.8-2.2 1.3-.6 2.8-.8 4.2-.8 1 0 1.8.5 2 1.3a1 1 0 0 1-.9 1.2H15z" />
-  </svg>
-)
-
-const BookmarkIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M6 3a3 3 0 0 0-3 3v14a1 1 0 0 0 1.6.8l7.4-5.55 7.4 5.55A1 1 0 0 0 21 20V6a3 3 0 0 0-3-3H6z" />
-  </svg>
-)
-
-const MailIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M4 4h16a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3zm16 3H4l8 5 8-5z" />
-  </svg>
-)
+import { Home, Users, Settings, Briefcase, BadgeCheck } from 'lucide-react'
+import Link from 'next/link'
 
 const StarIcon = () => (
   <svg width="12" height="12" viewBox="0 0 24 24" fill="#FF3B30">
@@ -35,47 +12,48 @@ const StarIcon = () => (
 )
 
 const navItems = [
-  { id: 'home', label: 'Home', icon: HomeIcon },
-  { id: 'about', label: 'About', icon: UsersIcon },
-  { id: 'bookmark', label: 'Saved', icon: BookmarkIcon },
-  { id: 'contact', label: 'Contact', icon: MailIcon },
+  { id: 'home', label: 'Home', icon: Home },
+  { id: 'about', label: 'About', icon: Users },
+  { id: 'services', label: 'Services', icon: Settings },
+  { id: 'works', label: 'Works', icon: Briefcase },
+  { id: 'brands', label: 'Brands', icon: BadgeCheck },
 ]
 
 // High-quality images matching the reference screenshots
 const CARDS_DATA = [
   {
     id: 1,
-    src: "images/hero1.webp",
+    src: "images/fepohero1.jpg",
     alt: "Dark hoodie portrait",
   },
   {
     id: 2,
-    src: "images/hero2.webp",
+    src: "images/fepohero2.jpg",
     alt: "Colorful candies",
   },
   {
     id: 3,
-    src: "images/hero3.webp",
+    src: "images/fepohero3.jpg",
     alt: "Curly hair hat portrait",
   },
   {
     id: 4,
-    src: "images/hero3.webp",
+    src: "images/fepohero4.jpg",
     alt: "Male portrait",
   },
   {
     id: 5,
-    src: "images/hero5.webp",
+    src: "images/fepohero5.png",
     alt: "Blue portrait",
   },
   {
     id: 6,
-    src: "images/hero1.webp",
+    src: "images/fepohero6.jpg",
     alt: "Pink model",
   },
   {
     id: 7,
-    src: "images/hero2.webp",
+    src: "images/fepohero7.webp",
     alt: "Yellow model",
   },
 ]
@@ -104,61 +82,62 @@ const Hero = () => {
     return diff
   }
 
+  // Smooth scroll to a section by its id
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
-    <section className="relative w-full min-h-screen bg-white text-black overflow-hidden flex flex-col justify-between select-none pb-10">
+    <section id="home" className="relative w-full min-h-screen bg-white text-black overflow-hidden flex flex-col justify-between select-none pb-10">
       {/* Background Vertical Guide Lines */}
-      <div className="absolute inset-0 pointer-events-none flex justify-between px-8 md:px-40 z-0 pb-16">
+      <div className="absolute inset-0 pointer-events-none md:flex hidden flex justify-between px-8 md:px-40 z-0 pb-16">
         <div className="w-[1px] h-full bg-gray-200 relative flex flex-col justify-between items-center">
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
-            <div className="w-2.5 h-2.5 bg-[#FF5420] rounded-full" />
+            <div className="w-2.5 h-2.5 bg-[#2563EB] rounded-full" />
             <span className="text-[11px] font-medium text-black whitespace-nowrap tracking-tight font-interd">
-              [ Grow Fast ]
+              [ Fepo ]
             </span>
           </div>
         </div>
         <div className="w-[1px] h-full bg-gray-200 relative flex flex-col justify-between items-center">
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
-            <div className="w-2.5 h-2.5 bg-[#FF5420] rounded-full" />
+            <div className="w-2.5 h-2.5 bg-[#2563EB] rounded-full" />
             <span className="text-[11px] font-medium text-black whitespace-nowrap tracking-tight font-interd">
-              [ Grow Fast ]
+              [ Fepo ]
             </span>
           </div>
         </div>
       </div>
 
       {/* Navigation Bar */}
-      <header className="relative z-30 flex items-center justify-between px-6 md:px-6 py-5">
-        <button className="flex items-center gap-2 bg-[#FF5420] text-white pl-1 pr-2 py-1 rounded-full font-medium text-sm hover:opacity-90 transition-opacity cursor-pointer">
-          <div className="w-7 h-7 rounded-full bg-white flex flex-col items-center justify-center gap-[3px]">
-            <span className="w-3.5 h-[2px] bg-[#FF5420] rounded-full"></span>
-            <span className="w-3.5 h-[2px] bg-[#FF5420] rounded-full"></span>
+      <header className="relative z-30 flex items-center justify-center px-6 md:px-6 py-2">
+        <Link href="/">
+          <div className="flex items-center gap-2 cursor-pointer">
+            <img src="/images/logo.webp" alt="Fepo Logo" className="w-20 h-20 invert" />
           </div>
-          <span className="font-medium font-interd text-lg tracking-tight">Menu</span>
-        </button>
+        </Link>
 
-        <div className="flex items-center gap-2 cursor-pointer">
-          <img src="/images/Ulogo.svg" alt="Uxoral Logo" className="w-7 h-7" />
-          <span className="text-2xl font-semibold font-interd tracking-tight text-black">
-            Uxoral
-          </span>
+        <div className="absolute right-6 md:right-10 md:block hidden">
+          <button className="bg-[#2563EB] text-white px-5 py-1 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity cursor-pointer">
+            Contact
+          </button>
         </div>
-
-        <button className="bg-[#FF5420] text-white px-5 py-1 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity cursor-pointer">
-          Contact
-        </button>
       </header>
 
       {/* Main Content Body */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-start pt-4 md:pt-8">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-start pt-4 md:pt-8 md:-mt-4">
         {/* Main Headline */}
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[118px] font-semibold text-center tracking-tight leading-none text-black z-20 max-w-7xl px-4 font-interd">
-          We build the next
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[90px] font-semibold text-center tracking-tight leading-none text-black z-20 max-w-7xl px-4 font-interd">
+          crafting visuals & stories
         </h1>
 
         {/* Big Background Typography (UXORA) */}
-        <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none select-none z-0">
-          <span className="text-[140px] sm:text-[220px] md:text-[280px] lg:text-[320px] font-bold text-[#F3F3F3] tracking-tighter leading-none block font-interd">
-            UXORA
+        <div className="absolute top-[50%] left-[51%] -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none select-none z-0">
+          <span className="text-[140px] sm:text-[220px] md:text-[280px] lg:text-[320px] font-black text-[#e5e4e4b6] tracking-widest leading-none block font-interd">
+            FEPO
           </span>
         </div>
 
@@ -227,7 +206,7 @@ const Hero = () => {
                   duration: 0.85,
                   ease: [0.25, 1, 0.5, 1], // Smooth natural spring curve
                 }}
-                className="absolute w-[180px] sm:w-[220px] md:w-[250px] h-[280px] sm:h-[330px] md:h-[350px] rounded-3xl overflow-hidden bg-gray-100 select-none cursor-pointer"
+                className="absolute w-[250px] sm:w-[220px] md:w-[250px] h-[280px] sm:h-[330px] md:h-[350px] rounded-3xl overflow-hidden bg-gray-100 select-none cursor-pointer"
               >
                 <img
                   src={card.src}
@@ -242,11 +221,10 @@ const Hero = () => {
         {/* BOTTOM SECTION - Agency Tagline & Social Proof */}
         <div className="relative z-20 flex flex-col items-center text-center mt-12 md:mt-16 max-w-2xl px-4">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-black leading-tight font-interd">
-            The European Creative Agency developing <br className="hidden sm:block" />
-            the future of commerce
+            Crafting visuals and compelling stories for brands that move the world.
           </h2>
 
-          <div className="flex items-center justify-center gap-8 mt-6">
+          {/* <div className="flex items-center justify-center gap-8 mt-6">
             <div className="flex items-center gap-2.5">
               <div className="flex -space-x-2.5">
                 <img
@@ -274,7 +252,7 @@ const Hero = () => {
             <div className="flex items-center gap-2.5">
               <div className="w-7 h-7 rounded-full bg-[#1C252C] flex items-center justify-center relative">
                 <span className="text-white text-xs font-bold leading-none">C</span>
-                <span className="absolute bottom-1 right-1 w-1.5 h-1.5 bg-[#FF5420] rounded-full"></span>
+                <span className="absolute bottom-1 right-1 w-1.5 h-1.5 bg-[#2563EB] rounded-full"></span>
               </div>
               <div className="flex flex-col text-left">
                 <span className="text-xs font-medium text-gray-900 font-interd">
@@ -289,7 +267,7 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -301,6 +279,7 @@ const Hero = () => {
             <div key={item.id} className="relative group flex items-center">
               <button
                 aria-label={item.label}
+                onClick={() => scrollToSection(item.id)}
                 className="w-12 h-12 md:w-14 md:h-14 bg-[#EBE8E1] rounded-xl flex items-center justify-center transition-all duration-300 ease-out group-hover:-rotate-8 group-hover:scale-105 cursor-pointer z-10"
               >
                 <div className={`${index === 0 ? "text-[#1F201C]" : "text-[#888F82]"} group-hover:text-[#1F201C] transition-colors duration-300`}>

@@ -89,7 +89,7 @@ const Points4 = () => {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 md:mb-20">
           <div className="flex items-center gap-1 text-xs font-interd uppercase mb-3">
-            <span className="text-[#FF5420] font-medium">//</span>
+            <span className="text-[#2563EB] font-medium">//</span>
             <span className="text-gray-700">WORKING PROCESS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-black font-interd">
@@ -130,7 +130,7 @@ const Points4 = () => {
                   {/* BIG CENTERED NUMBER */}
                   <div className="flex-1 flex items-center justify-center pt-2 pb-4">
                     <span
-                      className={`text-[120px] sm:text-[140px] md:text-[200px] font-normal leading-none font-interd block text-center transition-colors duration-300 group-hover:text-[#FF5420]`}
+                      className={`text-[120px] sm:text-[140px] md:text-[200px] font-normal leading-none font-interd block text-center transition-colors duration-300 group-hover:text-[#2563EB]`}
                     >
                       {card.number}
                     </span>
@@ -140,7 +140,7 @@ const Points4 = () => {
                   <div>
                     <h3
                       className={`text-base sm:text-lg font-semibold mb-1.5 font-interd ${
-                        card.titleOrange ? 'text-[#FF5420]' : 'text-black'
+                        card.titleOrange ? 'text-[#2563EB]' : 'text-black'
                       }`}
                     >
                       {card.title}
