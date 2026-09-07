@@ -109,8 +109,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Col 3: Address (Right Aligned) */}
-          <div className="flex flex-col items-start md:items-center text-left md:text-center">
+          {/* Col 3: Address (Center Aligned) */}
+          <div className="flex flex-col items-center text-center">
             <h3 className="text-base font-medium text-black mb-4 font-interd">
               Address
             </h3>
@@ -129,11 +129,11 @@ const Footer = () => {
         {/* Giant U Logo Cutout dipping into black section */}
         {/* Giant U Logo Cutout dipping into black section (BIGGER SIZE) */}
         <Link href="/">
-<div className="absolute left-1/2 -translate-x-1/2 -top-28 md:-top-36 w-56 h-56 md:w-64 md:h-64 rounded-full bg-[#F3F3F3] flex items-center justify-center p-1 z-20">
+<div className="absolute left-1/2 -translate-x-1/2 -top-24 md:-top-36 w-50 h-50 md:w-64 md:h-64 rounded-full bg-[#F3F3F3] flex items-center justify-center p-1 z-20">
   <img
     src="/images/logo.webp"
     alt="Uxora Big Logo"
-    className="w-50 h-50 object-cover pointer-events-none invert"
+    className="w-34 md:w-50 h-34 md:h-50 object-cover pointer-events-none invert"
   />
 </div>
 </Link>
@@ -144,13 +144,13 @@ const Footer = () => {
           {/* <div className="flex items-center gap-4">
             <a
               href="#twitter"
-              className="px-6 py-2.5 rounded-full border-3 border-white text-white text-xs sm:text-sm font-normal hover:border-[#2563EB] transition-colors duration-300 cursor-pointer"
+              className="px-6 py-2.5 rounded-full border-3 border-white text-white text-xs sm:text-sm font-normal hover:border-[#E11D48] transition-colors duration-300 cursor-pointer"
             >
               Twitter
             </a>
             <a
               href="https://www.instagram.com/fepo.worldwide/?hl=en" target='_blank'
-              className="px-6 py-2.5 rounded-full border-3 border-white text-white text-xs sm:text-sm font-normal hover:border-[#2563EB] transition-colors duration-300 cursor-pointer"
+              className="px-6 py-2.5 rounded-full border-3 border-white text-white text-xs sm:text-sm font-normal hover:border-[#E11D48] transition-colors duration-300 cursor-pointer"
             >
               Instagram
             </a>
@@ -160,13 +160,13 @@ const Footer = () => {
           {/* <div className="flex items-center gap-4">
             <a
               href="#facebook"
-              className="px-6 py-2.5 rounded-full border-3 border-white text-white text-xs sm:text-sm font-normal hover:border-[#2563EB] transition-colors duration-300 cursor-pointer"
+              className="px-6 py-2.5 rounded-full border-3 border-white text-white text-xs sm:text-sm font-normal hover:border-[#E11D48] transition-colors duration-300 cursor-pointer"
             >
               Facebook
             </a>
             <a
               href="#behance"
-              className="px-6 py-2.5 rounded-full border-3 border-white text-white text-xs sm:text-sm font-normal hover:border-[#2563EB] transition-colors duration-300 cursor-pointer"
+              className="px-6 py-2.5 rounded-full border-3 border-white text-white text-xs sm:text-sm font-normal hover:border-[#E11D48] transition-colors duration-300 cursor-pointer"
             >
               Behance
             </a>
@@ -174,7 +174,7 @@ const Footer = () => {
         </div>
 
         {/* Giant Bottom UXORA Typography */}
-        <div className="w-full text-center overflow-hidden pt-4">
+        <div className="w-full text-center overflow-hidden pt-6 md:pt-4">
           <h1 className="text-[15vw] sm:text-[17vw] md:text-[18vw] font-black text-white leading-none select-none font-interd tracking-wider">
             FEPO
           </h1>

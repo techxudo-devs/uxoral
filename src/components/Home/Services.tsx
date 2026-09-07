@@ -113,7 +113,7 @@ const Services = () => {
             {/* Left Title */}
             <div>
               <div className="flex items-center gap-1 text-xs font-interd uppercase mb-3">
-                <span className="text-[#2563EB] font-medium">//</span>
+                <span className="text-[#E11D48] font-medium">//</span>
                 <span className="text-gray-700">SERVICES</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-black font-interd">
@@ -200,7 +200,7 @@ const Services = () => {
                   <div className="pt-2 border-t border-gray-100">
                     <a
                       href={activeService.link}
-                      className="inline-flex items-center gap-1.5 text-[#2563EB] text-xs sm:text-sm font-medium hover:underline font-interd transition-all"
+                      className="inline-flex items-center gap-1.5 text-[#E11D48] text-xs sm:text-sm font-medium hover:underline font-interd transition-all"
                     >
                       <span>Learn More</span>
                       <svg

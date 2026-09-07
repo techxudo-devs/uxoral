@@ -96,7 +96,7 @@ const Hero = () => {
       <div className="absolute inset-0 pointer-events-none md:flex hidden flex justify-between px-8 md:px-40 z-0 pb-16">
         <div className="w-[1px] h-full bg-gray-200 relative flex flex-col justify-between items-center">
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
-            <div className="w-2.5 h-2.5 bg-[#2563EB] rounded-full" />
+            <div className="w-2.5 h-2.5 bg-[#E11D48] rounded-full" />
             <span className="text-[11px] font-medium text-black whitespace-nowrap tracking-tight font-interd">
               [ Fepo ]
             </span>
@@ -104,7 +104,7 @@ const Hero = () => {
         </div>
         <div className="w-[1px] h-full bg-gray-200 relative flex flex-col justify-between items-center">
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
-            <div className="w-2.5 h-2.5 bg-[#2563EB] rounded-full" />
+            <div className="w-2.5 h-2.5 bg-[#E11D48] rounded-full" />
             <span className="text-[11px] font-medium text-black whitespace-nowrap tracking-tight font-interd">
               [ Fepo ]
             </span>
@@ -121,7 +121,7 @@ const Hero = () => {
         </Link>
 
         <div className="absolute right-6 md:right-10 md:block hidden">
-          <button className="bg-[#2563EB] text-white px-5 py-1 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity cursor-pointer">
+          <button className="bg-[#E11D48] text-white px-5 py-1 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity cursor-pointer">
             Contact
           </button>
         </div>
@@ -252,7 +252,7 @@ const Hero = () => {
             <div className="flex items-center gap-2.5">
               <div className="w-7 h-7 rounded-full bg-[#1C252C] flex items-center justify-center relative">
                 <span className="text-white text-xs font-bold leading-none">C</span>
-                <span className="absolute bottom-1 right-1 w-1.5 h-1.5 bg-[#2563EB] rounded-full"></span>
+                <span className="absolute bottom-1 right-1 w-1.5 h-1.5 bg-[#E11D48] rounded-full"></span>
               </div>
               <div className="flex flex-col text-left">
                 <span className="text-xs font-medium text-gray-900 font-interd">

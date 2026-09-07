@@ -89,7 +89,7 @@ const Points4 = () => {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 md:mb-20">
           <div className="flex items-center gap-1 text-xs font-interd uppercase mb-3">
-            <span className="text-[#2563EB] font-medium">//</span>
+            <span className="text-[#E11D48] font-medium">//</span>
             <span className="text-gray-700">WORKING PROCESS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-black font-interd">
@@ -102,7 +102,7 @@ const Points4 = () => {
           
           {/* ORGANIC SOFT GLOWING BACKDROP */}
           <div className="absolute inset-0 pointer-events-none flex items-center justify-center z-0">
-            <div className="w-[110%] max-w-[1150px] h-[320px] bg-gradient-to-r from-[#FF007A] via-[#7C3AED] via-[#2563EB] to-[#38BDF8] blur-[95px] rounded-full transform translate-y-2" />
+            <div className="w-[110%] max-w-[1150px] h-[320px] bg-gradient-to-r from-[#FF007A] via-[#7C3AED] via-[#E11D48] to-[#38BDF8] blur-[95px] rounded-full transform translate-y-2" />
           </div>
 
           {/* Cards Grid */}
@@ -130,7 +130,7 @@ const Points4 = () => {
                   {/* BIG CENTERED NUMBER */}
                   <div className="flex-1 flex items-center justify-center pt-2 pb-4">
                     <span
-                      className={`text-[120px] sm:text-[140px] md:text-[200px] font-normal leading-none font-interd block text-center transition-colors duration-300 group-hover:text-[#2563EB]`}
+                      className={`text-[120px] sm:text-[140px] md:text-[200px] font-normal leading-none font-interd block text-center transition-colors duration-300 group-hover:text-[#E11D48]`}
                     >
                       {card.number}
                     </span>
@@ -140,7 +140,7 @@ const Points4 = () => {
                   <div>
                     <h3
                       className={`text-base sm:text-lg font-semibold mb-1.5 font-interd ${
-                        card.titleOrange ? 'text-[#2563EB]' : 'text-black'
+                        card.titleOrange ? 'text-[#E11D48]' : 'text-black'
                       }`}
                     >
                       {card.title}

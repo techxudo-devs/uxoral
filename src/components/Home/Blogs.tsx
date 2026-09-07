@@ -66,7 +66,7 @@ const Blogs = () => {
         <div className="flex flex-col items-center text-center mb-10 md:mb-14">
           {/* Top Tag */}
           <div className="flex items-center gap-1 text-xs font-interd uppercase mb-3">
-            <span className="text-[#2563EB] font-medium">//</span>
+            <span className="text-[#E11D48] font-medium">//</span>
             <span className="text-gray-700">Blogs & Articles</span>
           </div>
 

@@ -56,7 +56,7 @@ const Featured = () => {
           <div>
             {/* Top Tag */}
             <div className="flex items-center gap-1 text-xs font-interd uppercase mb-3">
-              <span className="text-[#2563EB] font-medium">//</span>
+              <span className="text-[#E11D48] font-medium">//</span>
               <span className="text-gray-700">ABOUT US</span>
             </div>
 
@@ -67,13 +67,13 @@ const Featured = () => {
 
             {/* Subtitle */}
             <p className="text-xs sm:text-sm text-gray-800 max-w-lg font-interd">
-              <span className="text-[#2563EB] font-medium">We craft visually striking stories that move people.y</span>{' '}
+              <span className="text-[#E11D48] font-medium">We craft visually striking stories that move people.y</span>{' '}
               Whether it’s a high-energy commercial, a cinematic brand film, or sleek social content, we bring ideas to life.
             </p>
           </div>
 
           {/* Right Button with Bottom-to-Top Black Fill Hover Effect */}
-          <button className="relative overflow-hidden bg-[#2563EB] text-white px-6 py-3 rounded-full font-medium text-sm w-fit cursor-pointer font-interd group">
+          <button className="relative overflow-hidden bg-[#E11D48] text-white px-6 py-3 rounded-full font-medium text-sm w-fit cursor-pointer font-interd group">
             {/* Smooth Fill Layer */}
             <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full z-0 pointer-events-none" />
 
@@ -177,7 +177,7 @@ const Featured = () => {
               </div>
 
               {/* Bottom Small Card: Orange Awards (76px) */}
-              <div className="bg-[#2563EB] text-white rounded-xl h-[76px] px-5 py-3 flex items-center justify-between">
+              <div className="bg-[#E11D48] text-white rounded-xl h-[76px] px-5 py-3 flex items-center justify-between">
                 <div>
                   <span className="text-2xl sm:text-3xl font-medium tracking-tight block leading-none font-interd">
                     20+
@@ -186,7 +186,7 @@ const Featured = () => {
                     Global Awards & Features
                   </span>
                 </div>
-                <div className="w-9 h-9 rounded-full bg-white text-[#2563EB] flex items-center justify-center flex-shrink-0">
+                <div className="w-9 h-9 rounded-full bg-white text-[#E11D48] flex items-center justify-center flex-shrink-0">
                   <TrophyIcon />
                 </div>
               </div>
@@ -207,14 +207,14 @@ const Featured = () => {
               <div className="bg-white rounded-xl h-[360px] p-6 sm:p-7 flex flex-col justify-between border border-gray-200">
                 <div>
                   <p className="text-xs sm:text-base font-medium text-black leading-tight font-interd">
-                    <span className="text-[#2563EB] font-bold">250+</span>{' '}
+                    <span className="text-[#E11D48] font-bold">250+</span>{' '}
                     testimonial with trusted by YC-backed, VC-funded, a16z,
                     Sequoia
                   </p>
                 </div>
                 <div>
                   <span className="text-4xl sm:text-5xl font-semibold text-black tracking-tight block font-interd">
-                    5K<span className="text-[#2563EB]">+</span>
+                    5K<span className="text-[#E11D48]">+</span>
                   </span>
                   <span className="text-xs text-gray-600 font-normal mt-1 block font-interd">
                     Global Project
@@ -226,8 +226,8 @@ const Featured = () => {
               <div className="bg-white rounded-xl h-[76px] px-5 py-3 flex items-center justify-between border border-gray-200">
                 <div className="flex items-center gap-2.5">
                   <span className="relative flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2563EB] opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#2563EB]"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E11D48] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#E11D48]"></span>
                   </span>
                   <span className="text-xs font-medium text-black font-interd">
                     Available For Work

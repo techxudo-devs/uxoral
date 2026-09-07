@@ -55,7 +55,7 @@ const Faqs = () => {
         <div className="flex-1 max-w-lg">
           {/* Top Tag */}
           <div className="flex items-center gap-1 text-xs font-interd uppercase mb-3">
-            <span className="text-[#2563EB] font-medium">//</span>
+            <span className="text-[#E11D48] font-medium">//</span>
             <span className="text-gray-700">FAQS</span>
           </div>
 
@@ -73,7 +73,7 @@ const Faqs = () => {
           </p>
 
           {/* Orange Pill Button with Bottom-to-Top Black Fill Hover */}
-          <button className="relative overflow-hidden bg-[#2563EB] text-white px-6 py-3 rounded-full font-medium text-sm cursor-pointer font-interd group">
+          <button className="relative overflow-hidden bg-[#E11D48] text-white px-6 py-3 rounded-full font-medium text-sm cursor-pointer font-interd group">
             {/* Smooth Fill Layer */}
             <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full z-0 pointer-events-none" />
 
