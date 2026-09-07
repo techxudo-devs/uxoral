@@ -132,7 +132,7 @@ const Featured = () => {
                   />
                 </div>
                 <span className="text-xs font-medium text-black font-interd">
-                  200+ Brands Worldwide
+                  100+ Artists Produced
                 </span>
               </div>
 
@@ -143,16 +143,17 @@ const Featured = () => {
                     “”
                   </span>
                   <p className="text-sm sm:text-base font-medium text-black leading-tight font-interd">
-                    Our platform feels faster, smoother, and just works better and
-                    intuitively. The engagement metrics don’t lie.
+                    Every beat we craft is built to move rooms — layered,
+                    polished, and unmistakably ours. The sound speaks for
+                    itself.
                   </p>
                 </div>
                 <div>
                   <span className="text-4xl sm:text-4xl font-semibold text-black tracking-tight block font-interd">
-                    92<span className="text-gray-400 font-normal">%</span>
+                    100<span className="text-[#E11D48] font-normal">%</span>
                   </span>
                   <span className="text-xs text-gray-600 font-normal mt-1 block font-interd">
-                    Client Satisfaction
+                    Original In-House Productions
                   </span>
                 </div>
               </div>
@@ -180,10 +181,10 @@ const Featured = () => {
               <div className="bg-[#E11D48] text-white rounded-xl h-[76px] px-5 py-3 flex items-center justify-between">
                 <div>
                   <span className="text-2xl sm:text-3xl font-medium tracking-tight block leading-none font-interd">
-                    20+
+                    50+
                   </span>
                   <span className="text-[11px] text-white font-normal mt-1 block font-interd">
-                    Global Awards & Features
+                    Tracks Released & Awards
                   </span>
                 </div>
                 <div className="w-9 h-9 rounded-full bg-white text-[#E11D48] flex items-center justify-center flex-shrink-0">
@@ -208,16 +209,16 @@ const Featured = () => {
                 <div>
                   <p className="text-xs sm:text-base font-medium text-black leading-tight font-interd">
                     <span className="text-[#E11D48] font-bold">250+</span>{' '}
-                    testimonial with trusted by YC-backed, VC-funded, a16z,
-                    Sequoia
+                    artists produced & sounds placed — from chart toppers to
+                    global brand anthems.
                   </p>
                 </div>
                 <div>
                   <span className="text-4xl sm:text-5xl font-semibold text-black tracking-tight block font-interd">
-                    5K<span className="text-[#E11D48]">+</span>
+                    10M<span className="text-[#E11D48]">+</span>
                   </span>
                   <span className="text-xs text-gray-600 font-normal mt-1 block font-interd">
-                    Global Project
+                    Streams on Our Productions
                   </span>
                 </div>
               </div>
