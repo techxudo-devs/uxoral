@@ -27,12 +27,12 @@ const LogoSlider = () => {
         {logos.map((logo) => (
           <div
             key={logo.id}
-            className="flex items-center justify-center w-[220px] sm:w-[260px] md:w-[300px] h-34 sm:h-28 md:h-34 px-8 flex-shrink-0"
+            className="flex items-center justify-center w-[200px] sm:w-[240px] md:w-[280px] h-30 sm:h-28 md:h-28 px-6 flex-shrink-0"
           >
             <img
               src={logo.src}
               alt={logo.alt}
-              className={`${logo.size} w-auto object-contain`}
+              className={`${logo.size} w-auto object-contain max-h-full`}
             />
           </div>
         ))}

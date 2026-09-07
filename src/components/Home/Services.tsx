@@ -72,51 +72,40 @@ const servicesData: ServiceItem[] = [
       'We craft short-form, platform-optimized content designed to stop the scroll, spark interaction, and maximize reach across all major social media channels.',
     link: '#',
   },
-  // {
-  //   id: '05',
-  //   title: 'Video Production',
-  //   pills: [
-  //     'Corporate Video Production',
-  //     'Event Video Production',
-  //     'Promotional Videos',
-  //     'Post-Production & Editing',
-  //   ],
-  //   description:
-  //     'Uxora specializes in video production since 2015 in Manhattan, our talented team leverages over 30 years of combined experience working with advertising agencies and brands to create exceptional visual narratives. We are dedicated to video excellence, crafting impactful content that authentically engages audiences and elevates brands.',
-  //   link: '#',
-  // },
 ]
 
 const Services = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
 
-  // Track scroll inside the 500vh container
+  // Track scroll inside the container
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end end'],
   })
 
-  // Synchronize scroll progress to the active service index (0 to 4)
+  // Synchronize scroll progress smoothly without flickering
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const totalServices = servicesData.length
-    const newIndex = Math.min(
-      Math.floor(latest * totalServices),
-      totalServices - 1
-    )
-    if (newIndex !== activeIndex && newIndex >= 0) {
-      setActiveIndex(newIndex)
-    }
+    const progress = Math.max(0, Math.min(0.999, latest))
+    const newIndex = Math.floor(progress * totalServices)
+
+    setActiveIndex((prevIndex) => {
+      if (newIndex !== prevIndex && newIndex >= 0 && newIndex < totalServices) {
+        return newIndex
+      }
+      return prevIndex
+    })
   })
 
   const activeService = servicesData[activeIndex]
 
   return (
-    // Outer scroll container (500vh to give enough scroll distance for 5 steps)
-    <section id="services" ref={containerRef} className="relative w-full h-[500vh] bg-white text-black font-interd select-none">
+    // Outer scroll container
+    <section id="services" ref={containerRef} className="relative w-full h-[400vh] bg-white text-black font-interd select-none">
       
-      {/* Sticky Inner Viewport */}
-      <div className="sticky top-0 h-screen w-full flex flex-col justify-between py-10 md:py-14 px-6 md:px-12 overflow-hidden">
+      {/* Sticky Inner Viewport with GPU Acceleration */}
+      <div className="sticky top-0 h-screen w-full flex flex-col justify-between py-10 md:py-14 px-6 md:px-12 overflow-hidden transform-gpu">
         <div className="max-w-6xl mx-auto w-full h-full flex flex-col justify-between">
           
           {/* Header Area */}
@@ -124,9 +113,9 @@ const Services = () => {
             {/* Left Title */}
             <div>
               <div className="flex items-center gap-1 text-xs font-interd uppercase mb-3">
-            <span className="text-[#2563EB] font-medium">//</span>
-            <span className="text-gray-700">SERVICES</span>
-          </div>
+                <span className="text-[#2563EB] font-medium">//</span>
+                <span className="text-gray-700">SERVICES</span>
+              </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-black font-interd">
                 What We Do?
               </h2>
@@ -142,9 +131,9 @@ const Services = () => {
           </div>
 
           {/* Main Interactive Services Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center flex-1 my-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center flex-1 my-auto transform-gpu">
             
-            {/* Left Column - 5 Service Points */}
+            {/* Left Column - 4 Service Points */}
             <div className="lg:col-span-6 flex flex-col gap-5 md:gap-6">
               {servicesData.map((service, index) => {
                 const isActive = activeIndex === index
@@ -158,7 +147,7 @@ const Services = () => {
                     {/* Step Number */}
                     <span
                       className={`text-xs sm:text-sm font-normal font-interd transition-colors duration-300 ${
-                        isActive ? 'text-black' : 'text-gray-300'
+                        isActive ? 'text-black font-medium' : 'text-gray-300'
                       }`}
                     >
                       {service.id}
@@ -169,7 +158,7 @@ const Services = () => {
                       className={`text-2xl sm:text-3xl md:text-4xl tracking-tight font-interd transition-colors duration-300 ${
                         isActive
                           ? 'text-black font-medium'
-                          : 'text-gray-300 hover:text-gray-400'
+                          : 'text-gray-300 hover:text-gray-400 font-medium'
                       }`}
                     >
                       {service.title}
@@ -184,11 +173,11 @@ const Services = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeService.id}
-                  initial={{ opacity: 0, y: 15 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -15 }}
-                  transition={{ duration: 0.35, ease: 'easeOut' }}
-                  className="flex flex-col gap-6"
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.28, ease: 'easeOut' }}
+                  className="flex flex-col gap-6 transform-gpu will-change-transform"
                 >
                   {/* Gray Pill Tags */}
                   <div className="flex flex-wrap gap-2 md:gap-2.5">
